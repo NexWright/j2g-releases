@@ -29,9 +29,8 @@ For the latest version (auto-updating links — always serve the most recent bui
 - AppImage (x64):       https://github.com/NexWright/j2g-releases/releases/latest/download/J2G-x64.AppImage
 - Debian/Ubuntu (x64):  https://github.com/NexWright/j2g-releases/releases/latest/download/j2g_amd64.deb
 
-> Equivalent tag-based URLs (Docker-style) work too:
-> `https://github.com/NexWright/j2g-releases/releases/download/latest/J2G-arm64.dmg` etc.
-> Both URL forms point at the same files; pick whichever your tooling prefers.
+> The links above use GitHub's `/releases/latest/` redirect so they
+> auto-resolve to the most recent release without ever changing.
 > Browse the [Releases](../../releases) tab to download a specific version.
 
 ## Verifying integrity
