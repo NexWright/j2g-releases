@@ -14,7 +14,7 @@ distributed via GitHub Releases for fast public downloads.
 
 See the [**Releases**](../../releases) tab.
 
-For the latest version (auto-updating link):
+For the latest version (auto-updating links — always serve the most recent build):
 
 ### macOS
 - Apple Silicon (recommended): https://github.com/NexWright/j2g-releases/releases/latest/download/J2G-arm64.dmg
@@ -29,10 +29,10 @@ For the latest version (auto-updating link):
 - AppImage (x64):       https://github.com/NexWright/j2g-releases/releases/latest/download/J2G-x64.AppImage
 - Debian/Ubuntu (x64):  https://github.com/NexWright/j2g-releases/releases/latest/download/j2g_amd64.deb
 
-> The exact asset filenames in each release also include the version
-> (e.g. `J2G-2026.108.527285-arm64.dmg`). The stable filenames above
-> always point at the latest release; browse the
-> [Releases](../../releases) tab to download a specific version.
+> Equivalent tag-based URLs (Docker-style) work too:
+> `https://github.com/NexWright/j2g-releases/releases/download/latest/J2G-arm64.dmg` etc.
+> Both URL forms point at the same files; pick whichever your tooling prefers.
+> Browse the [Releases](../../releases) tab to download a specific version.
 
 ## Verifying integrity
 
@@ -41,9 +41,8 @@ Every release ships with `SHA256SUMS.txt` and a detached GPG signature
 verification is fully self-contained:
 
 ```bash
-# Pick any version (or use /releases/latest/download/<name> for the most recent)
-TAG=v2026.127.155207
-BASE="https://github.com/NexWright/j2g-releases/releases/download/$TAG"
+# Use /releases/latest/download/<name> to always grab from the most recent release
+BASE="https://github.com/NexWright/j2g-releases/releases/latest/download"
 
 # Download the verification triple from the release
 curl -fLO "$BASE/pubkey.asc"
@@ -74,9 +73,9 @@ AppImage, signed by the same subkey.
 
 ## Auto-update
 
-J2G builds ship with electron-updater and check this release feed
-automatically — `latest-mac.yml`, `latest.yml`, and `latest-linux.yml`
-in each release are consumed by the updater.
+J2G builds ship with electron-updater and check for updates automatically
+once installed — there is no need to manually re-download from this page
+after the first install.
 
 ## Support
 
